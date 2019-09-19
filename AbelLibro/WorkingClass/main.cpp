@@ -1,11 +1,20 @@
 #include <iostream>
+#include <algorithm>
+#include <functional>
+#include <array>
+#include <string>
+#include <vector>
+#include <cmath>
+#include <stdio.h>
+#include <conio.h>
+#include <cstdlib>
 
 using namespace std;
 
 int sumOneToN(int num);
 int sumThreeAndFive(int num);
 void numberPyramid(int num);
-
+int Suma(int a, int b);
 
 int main()
 {
@@ -84,6 +93,8 @@ void numberPyramid(int num)
 		cout << endl;
 	}
 }
+
+
 // 09-18-2019 
 
 // I = Integrated, D = Development, E = Enviroment
@@ -93,3 +104,37 @@ void numberPyramid(int num)
 // Debugger -> Breakpoints, Profiler de memoria, Profiler de procesador, visualizador de memoria, Stack de llamadas.  
 // Editor de texto 
 
+// Funciones >>
+// Parametros por valor 
+
+int Suma(int a, int b)
+{														  //
+	int result = Suma(4, 5);							  //
+	cout << Suma(8, 3);									  //**Lapso de vida
+	return a + b;				                          //
+} //(Se elimina todo y se limpia el espacio de memoria.)  //
+
+//Parametros por referencia 
+
+int Suma2(int& a, int& b)                                  //
+{														   //
+	a = a + 1;											   //**Lapso de vida
+	b = b + 5;											   //
+	return a + b;										   //
+} //(Se elimina todo y se limpia el espacio de memoria.)   //
+
+int main2()
+{
+	int x = 8;
+	int y = 3;
+	cout << Suma2(x, y);
+	cout << x; //->9
+	cout << y; //->8
+}
+
+//Parametros por referencia constante 
+
+int Suma3(const int& a, const int& b) //No se puede modificar. Solamente leer y usar. //
+{																					  //**Lapso de vida
+	return a + b;																	  //
+} //(Se elimina todo y se limpia el espacio de memoria.)							  //

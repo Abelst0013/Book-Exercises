@@ -14,12 +14,12 @@ using namespace std;
 
 // Exercises 1 
 
-//int main() // 
-//{
-//	cout << "Hello, programming!\n"
-//		<< "Here we go!";
-//	return 0;
-//}
+int main() // 
+{
+	cout << "Hello, programming!\n"
+		<< "Here we go!";
+	return 0;
+}
 
 // Exercises 2 
 
@@ -58,23 +58,24 @@ using namespace std;
 
 // Exercises 4 
 
-int main()
-{
-	cout << "Como preparar sincronizadas paso a paso\n"
-		<< "\n"
-		<< "Ingredientes:\n"
-		<< "\t1. Tortillas.\n"
-		<< "\t2. Jamon.\n"
-		<< "\t3. Jitomate(Opcional).\n"
-		<< "\t4. Queso de mesa o para fundir.\n"
-		<< "\n";
+//int main()
+//{
+//	cout << "Como preparar sincronizadas paso a paso\n"
+//		<< "\n"
+//		<< "Ingredientes:\n"
+//		<< "\t1. Tortillas.\n"
+//		<< "\t2. Jamon.\n"
+//		<< "\t3. Jitomate(Opcional).\n"
+//		<< "\t4. Queso de mesa o para fundir.\n"
+//		<< "\n";
+//
+//	cout << "Preparacion:\n"
+//		<< "\t1. Coger un sartén del tamaño de las tortillas y poner a calentar sin necesidad de utilizar aceite.\n"
+//		<< "\t   Poner al fuego la tortilla y esperar un par de minutos para que tenga color, sin que se queme.\n"
+//		<< "\t2. Picar el Jamón y el queso en pequeños tamaños. Esparcir el jamón y el queso picado sobre la mitad de la tortilla.\n"
+//		<< "\t3. Doblar la tortilla por la mitad y dar la vuelta para que se queme un poco, y se derrita el queso al mismo tiempo.\n"
+//		<< "\t4. Sacar la sincronizada del sartén y servirlas recién hechas, con un poco de jitomate picado por dentro.\n"
+//		<< "\n"
+//		<< "Buen Apetito!\n";
+//}
 
-	cout << "Preparacion:\n"
-		<< "\t1. Coger un sartén del tamaño de las tortillas y poner a calentar sin necesidad de utilizar aceite.\n"
-		<< "\t   Poner al fuego la tortilla y esperar un par de minutos para que tenga color, sin que se queme.\n"
-		<< "\t2. Picar el Jamón y el queso en pequeños tamaños. Esparcir el jamón y el queso picado sobre la mitad de la tortilla.\n"
-		<< "\t3. Doblar la tortilla por la mitad y dar la vuelta para que se queme un poco, y se derrita el queso al mismo tiempo.\n"
-		<< "\t4. Sacar la sincronizada del sartén y servirlas recién hechas, con un poco de jitomate picado por dentro.\n"
-		<< "\n"
-		<< "Buen Apetito!\n";
-}

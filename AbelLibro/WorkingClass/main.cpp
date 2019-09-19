@@ -84,3 +84,12 @@ void numberPyramid(int num)
 		cout << endl;
 	}
 }
+// 09-18-2019 
+
+// I = Integrated, D = Development, E = Enviroment
+// Compilador - Debugger - Editor de Texto
+
+// Compilador -> Analisis, Linker, Codigo Objeto.
+// Debugger -> Breakpoints, Profiler de memoria, Profiler de procesador, visualizador de memoria, Stack de llamadas.  
+// Editor de texto 
+

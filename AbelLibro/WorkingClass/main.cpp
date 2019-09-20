@@ -138,3 +138,63 @@ int Suma3(const int& a, const int& b) //No se puede modificar. Solamente leer y 
 {																					  //**Lapso de vida
 	return a + b;																	  //
 } //(Se elimina todo y se limpia el espacio de memoria.)							  //
+
+// 09-19-2019
+
+// Sobrecarga -> de Funciones y de Operadores.
+//
+// Funciones -> Crear 2 o mas versiones de la misma funcion para que trabaje con parametros y tipo de retornos diferentes. 
+
+int Suma4(int a, int b) //Cambiar siempre los parametros de entrada. 
+{
+	return a + b;
+}
+
+float Suma4(float a, float b)
+{
+	return a + b;
+}
+
+float Suma4(float a, int b)
+{
+	return a + b;
+}
+
+float Suma4(int a, float b)
+{
+	return a + b;
+}
+
+int Suma4(int a, int b, int c)
+{
+	return a + b + c;
+}
+
+string Suma4(string a, string b) // Concatenacion 
+{
+	for (int i = 0; i < b.lenght(); ++i)
+	{
+		a.push(b[i]);
+	}
+	return a;
+}
+
+class Vector ()
+{
+public:
+	Vector(int x, int y)
+	Vector();
+	int m_x;
+	int m_y;
+}
+
+Vector Suma4(Vector a, Vector b)
+{
+	Vector result;
+	result.m_x = a.m_x + b.m_x;
+	result.m_y = a.m_y + b.m_y;
+	return result;
+
+}
+// Operadores -> "+, -, *, /, <<, >>, ==, !==" 
+//

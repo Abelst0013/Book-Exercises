@@ -198,3 +198,16 @@ Vector Suma4(Vector a, Vector b)
 }
 // Operadores -> "+, -, *, /, <<, >>, ==, !==" 
 //
+//
+// Estructuras de Datos -> *Arreglo, Lista, Stack, Queue, Map/Dictonary, Binary Tree, Set, Graph, Deque, *Matrix, Tuple.
+// Arreglo (Vector) -> Conjunto de datos almacenados en bloques de memoria secuenciales. 
+// Lista -> Conjunto de datos almacenados en bloques distribuidos aleatoriamente en la memoria con una referencia al siguiente elemento. 
+// Stack -> (FiLo -> First in, Last Out), (LiFo -> Last in, First Out) Conjunto de datos organizados de tal manera en que el ultimo elemento en ser insertado es el primero en poderse sacarse.
+// Queue -> (FiFo -> First in, First Out) Conjunto de datos organizados de tal manera en que el primer elemento en ser insertado es el primero en salir. (Filas comunes) 
+// Map / Dictonary -> Conjunto de datos almacenados en pares de datos donde uno es una llave/identificador, y el otro el valor que queremos almacenar; las llaves deben ser unicas.
+// Binary Tree -> (Raiz, Rama y Hojas) Conjunto de datos donde cada elemento puede obtener hasta 2 sub elementos. Primer Elemento -> Raiz, Sub divisiones -> Rama, Y los ultimos -> Hojas.
+// Set -> Una lista con elementos unicos.
+// Graph -> Conjunto de datos o elementos enlazados segun la conveniencia. Los elementos pueden estar enlazados a cualquier cantidad de otros elementos. 
+// Deque -> Queue con dos finales. Se pueden sacar el elemento inicial o el final, pero no los intermedios. (Combinancion de Stack con Queue)
+// Matrix -> Es un array (vector) bi dimesional. 
+// Tuple -> Una lista con ELEMENTOS inmutables.

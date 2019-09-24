@@ -211,3 +211,44 @@ void numberPyramid(int num)
 // Deque -> Queue con dos finales. Se pueden sacar el elemento inicial o el final, pero no los intermedios. (Combinancion de Stack con Queue)
 // Matrix -> Es un array (vector) bi dimesional. 
 // Tuple -> Una lista con ELEMENTOS inmutables.
+
+// 23-09-2019
+
+// Tipos de errores -> Errores de Compilacion, Errores de Linker, Errores de Codigo Objeto.
+
+// Errores de Compilacion -> Errores de Sintaxis, Errores de definicion. 
+// Errores de Linker -> Blibioteca no encontradas, Inclusiones recursivas
+// Errores de Ejecucion - > Errores Fatales (Excepciones), Bugs. -> Errores de Logica. 
+// vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+// Stack Overflow -> Te terminas la memoria y se cierra el programa. 
+// Access Violation -> Cuando quieres acceder a una parte de la memoria que no tienes control, o que no tienes acceso a ella. (>Punteros y Arreglos<)
+
+
+// For ( >Declaracion inicial< , >Condicion< , >Operacion< )
+// 0 = Falso
+// # = Verdadero
+
+// bool isABigger(int a, int b)
+// {
+// 	return a > b;
+// }
+// 
+// if (isABigger(3,8))
+// 
+// while (isABigger(x,y))
+
+
+// TEMARIO
+// Cout -> Para imprimir 
+// Cin -> Para 
+// Tipos de Datos -> Int (4B - 32b), Char(1B - 8b), Float(4B - 32b), Bool(1B - 8b), String(Indifinido), Double(8B - 64b), Long(4B - 32b), Short(2B - 16b), Long long(8B - 64b). 
+// Modificadores -> Const, Const Expr, Static, Dynamic, Unsigned, Long. 
+// Sentencias condicionales -> If, else, Switch. 
+// Sentencias ciclicas -> For & While.
+// Funciones -> Tipos de Parametros, Sobrecarga
+// Estructuras de datos -> *Arreglo, Lista, Stack, Queue, Map/Dictonary, Binary Tree, Set, Graph, Deque, *Matrix, Tuple.
+// IDE -> I = Integrated, D = Development, E = Enviroment
+// Proceso de Compilacion -> Analisis, Linker, Codigo Objeto.
+// Errores -> Errores de Compilacion, Errores de Linker, Errores de Codigo Objeto.
+// Strings -> Un conjunto de caracteres. -> Caracter Nulo al final. 
+// Stack y Heap -> Stack = Memoria Estatica, Heap = Memoria Dinamica. 

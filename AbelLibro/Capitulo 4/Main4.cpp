@@ -44,3 +44,77 @@ using namespace std;
 //		++a;
 //	}
 //}
+
+//void p_square(int x) // Try this 4 
+//{
+//	cout << x << '\t' << x * x << '\n';
+//}
+//
+//int main()
+//{
+//	for (int i = 0; i < 100; ++i)p_square(i);
+//}
+
+//int main() // Try this 5 
+//{
+//	vector<string> palabras;
+//	string temp;
+//  cout << "Escriba algo usando las palabras 'Abel', 'Hola' y 'Broccoli' << endl;
+//	while (cin >> temp)
+//		palabras.push_back(temp);
+//	vector<string> disliked;
+//	disliked.push_back("Broccoli");
+//	disliked.push_back("Hola");
+//	disliked.push_back("Abel");
+//
+//	for (int i = 0; i < palabras.size(); ++i)
+//	{
+//		bool PalabraDisliked = false;
+//		for (int a = 0; a < disliked.size(); ++a)
+//		{
+//			if(disliked[a] == palabras[i-1]) PalabraDisliked = true;
+//		}
+//		if (PalabraDisliked)
+//			cout << "BLEEP";
+//		else
+//			cout << palabras[i] << "\n";
+//	}
+//	cout << endl;
+//	return 0;
+//}
+
+// Exercises 3 
+
+//int main()
+//{
+//	vector<double> distancias;
+//	double distancia;
+//	double total = 0;
+//	double corta = 0;
+//	double lejana = 0;
+//	double media = 0;
+//	cout << "Ingrese 5 distancias y al terminar escriba distancias: " << endl;
+//	while (cin >> distancia) 
+//	{
+//		if (distancia > 0)
+//			distancias.push_back(distancia);
+//	}
+//	if (distancias.size() == 0)
+//		cout << "Error";
+//	corta = distancias[0];
+//	lejana = distancias[0];
+//	for (int i = 0; i < distancias.size(); ++i)
+//	{
+//		total += distancias[i];
+//		if (distancias[i] < corta)
+//			corta = distancias[i];
+//		if (distancias[i] > lejana)
+//			lejana = distancias[i];
+//	}
+//	media = total / distancias.size();
+//	cout << "Total: " << total << endl;
+//	cout << "Distancia mas corta: " << corta << endl;
+//	cout << "Distancia media: " << media << endl;
+//	cout << "Distancia mas lejana: " << lejana << endl;
+//	return 0;
+//}

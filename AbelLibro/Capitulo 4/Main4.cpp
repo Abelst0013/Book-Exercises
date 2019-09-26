@@ -118,3 +118,136 @@ using namespace std;
 //	cout << "Distancia mas lejana: " << lejana << endl;
 //	return 0;
 //}
+
+// Exercises 5 
+
+//int main()
+//{
+//	cout << "Ingresa 2 valores double y un operador : ";
+//	double a = 0;
+//	double b = 0;
+//	char c = ' ';
+//	while (cin >> a >> b >> c)
+//	{
+//		switch (c) 
+//		{
+//		case'+':
+//			cout << "Suma: " << a << " + " << b << " = " << a + b << endl;
+//			break;
+//		case'-':
+//			cout << "Resta: " << a << " - " << b << " = " << a - b << endl;
+//			break;
+//		case'/':
+//			cout << "Division: " << a << " / " << b << " = " << a / b << endl;
+//			break; 
+//		case'*':
+//			cout << "Multiplicacion: " << a << " * " << b << " = " << a * b << endl;
+//			break;
+//		}
+//
+//	}
+//
+//}
+
+// Exercises 6
+
+//int main()
+//{
+//	vector<string>letras;
+//	letras.push_back("Cero");
+//	letras.push_back("Uno");
+//	letras.push_back("Dos");
+//	letras.push_back("Tres");
+//	letras.push_back("Cuatro");
+//	letras.push_back("Cinco");
+//	letras.push_back("Seis");
+//	letras.push_back("Siete");
+//	letras.push_back("Ocho");
+//	letras.push_back("Nueve");
+//	vector<string>numeros;
+//	numeros.push_back("0");
+//	numeros.push_back("1");
+//	numeros.push_back("2");
+//	numeros.push_back("3");
+//	numeros.push_back("4");
+//	numeros.push_back("5");
+//	numeros.push_back("6");
+//	numeros.push_back("7");
+//	numeros.push_back("8");
+//	numeros.push_back("9");
+//
+//	string ingreso = " ";
+//	cout << "Ingresa un numero expresado con letras del >Cero< al >Nueve<: \n";
+//	while (cin >> ingreso)
+//	{
+//		bool valido = false;
+//		for (int i = 0; i < numeros.size(); ++i)
+//		{
+//			if (letras[i] == ingreso)
+//			{
+//				cout << numeros[i] << endl;
+//				valido = true;
+//			}
+//		}
+//	}
+//}
+
+// Exercises 7 
+
+//vector<string>letras;
+//
+//void init_vector()
+//{
+//	letras.push_back("Cero");
+//	letras.push_back("Uno");
+//	letras.push_back("Dos");
+//	letras.push_back("Tres");
+//	letras.push_back("Cuatro");
+//	letras.push_back("Cinco");
+//	letras.push_back("Seis");
+//	letras.push_back("Siete");
+//	letras.push_back("Ocho");
+//	letras.push_back("Nueve");
+//}
+//
+//int convertidor()
+//{
+//	string ingreso;
+//	cin >> ingreso;
+//	for (int i = 0; i < letras.size(); ++i)
+//	{
+//		if (letras[i] == ingreso)
+//			return i;
+//	}
+//}
+//
+//int main()
+//{
+//	init_vector();
+//	cout << "Ingresa 2 valores escritos a letra del >Cero< al >Nueve< y un operador \n";
+//	while (true)
+//	{
+//		int a = 0;
+//		int b = 0;
+//		char c = 0;
+//		a = convertidor();
+//		b = convertidor();
+//		cin >> c;
+//
+//		switch (c)
+//		{
+//		case'+':
+//			cout << "Suma: " << a << " + " << b << " = " << a + b << endl;
+//			break;
+//		case'-':
+//			cout << "Resta: " << a << " - " << b << " = " << a - b << endl;
+//			break;
+//		case'/':
+//			cout << "Division: " << a << " / " << b << " = " << a / b << endl;
+//			break;
+//		case'*':
+//			cout << "Multiplicacion: " << a << " * " << b << " = " << a * b << endl;
+//			break;
+//		}
+//	}
+//}

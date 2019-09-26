@@ -251,3 +251,166 @@ using namespace std;
 //		}
 //	}
 //}
+
+// Exercises 8 
+
+//int main()
+//{
+//	double square = 1;
+//	double total = 0;
+//	cout << "Square" << '\t' << "Grains" << '\t' << "Total\n";
+//	for (int i = 1; i <= 64; ++i)
+//	{
+//		total += square;
+//		cout << i << '\t' << square << '\t' << total << endl;
+//		square *= 2;
+//	}
+//	return 0;
+//}
+
+// Exercises 11 y 12 
+
+//vector<int> primo;
+//
+//bool NumeroPrimo(int a)
+//{
+//	for (int i = 0; primo[i] <= sqrt(a); i++)
+//	{
+//		if (a % primo[i] == 0)
+//			return false;
+//	}
+//	return true;
+//}
+//
+//int main()
+//{
+//	// cout << "Cuantos numeros primos quieres?\n";
+//	int primos = 25; // Cambiar a 0 
+//	// Cin >> primos; 
+//	primo.push_back(2);
+//	int i = 3;
+//	cout << "Los numeros primos entre el 1 al 100 son:" << endl;
+//	while (primo.size() < primos)
+//	{
+//		if (NumeroPrimo(i))
+//			primo.push_back(i);
+//		i += 2;
+//	}
+//	for (int i = 0; i < primo.size(); ++i)
+//		cout << primo[i] << endl;
+//}
+
+// Exercises 13 y 14
+
+//const int len = 100; // Cambiar para 14
+//int main()
+//{
+//	int arr[100] = { 0 };
+//	for (int i = 2; i < 100; i++)
+//	{
+//		for (int j = i * i; j < 100; j += i)
+//		{
+//			arr[j - 1] = 1;
+//		}
+//	}
+//	for (int i = 1; i < 100; i++)
+//	{
+//		if (arr[i - 1] == 0)
+//			cout << i << '\t';
+//	}
+//}
+
+// Exercises 18
+
+//int main()
+//{
+//	double a = 0;
+//	double b = 0;
+//	double c = 0;
+//	cout << "Ingresa los valores de la siguiente ecuacion ->( 'a' x^2 + 'b' x + 'c' ): \n";
+//	while (cin >> a >> b >> c)
+//	{
+//		double respuesta = b * b - 4 * a * c;
+//		if (respuesta == 0)
+//		{
+//			double x = -b / (2 * a);
+//			cout << "El valor de 'x' es: " << x << endl;
+//		}
+//		else {
+//			double x1 = (-b + sqrt(respuesta)) / 2 * a;
+//			double x2 = (-b - sqrt(respuesta)) / 2 * a;
+//			cout << "Los valores de x1 y x2 son: " << x1 << " y " << x2 << endl;
+//		}
+//	}
+//}
+
+// Exercises 19
+
+vector<string> nombres;
+vector<int> scores;
+
+void score(string a)
+{
+	int i = 0;
+	while (i < nombres.size())
+	{
+		if (nombres[i] == a)
+		{
+			cout << a << " " << scores[i] << endl;
+			return;
+		}
+		++i;
+	}
+	cout << "Name not found\n"; // Exercises 20
+}
+
+void nombre(int b)
+{
+	bool existe = false;
+	for (int i = 0; i < scores.size(); ++i)
+	{
+		if (scores[i] == b)
+		{
+			cout << nombres[i] << " " << b << endl;
+			existe = true;
+		}
+	}
+	if (!existe)
+		cout << "Score not found\n"; // Exercises 21
+}
+
+int main()
+{
+	string nombre2 = " ";
+	int score2 = 0;
+	cout << "Ingresa un nombre y puntuacion. (Ejemplo: 'Joe 17') despues agrega 'NoName 0' cuando alla terminado. \n";
+	while (cin >> nombre2 >> score2 && !(nombre2 == "NoName" && score2 == 0))
+	{
+		nombres.push_back(nombre2);
+		scores.push_back(score2);
+	}
+	for (int i = 0; i < nombres.size(); ++i)
+	{
+		for (int j = i + 1; j < nombres.size(); ++j)
+		{
+			if (nombres[i] == nombres[j])
+				cout << "Ya existe este nombre\n";
+		}
+	}
+	for (int i = 0; i < nombres.size(); ++i)
+		cout << nombres[i] << ", " << scores[i] << endl;
+	int score3 = 0;
+	cout << "Ingresa el nombre o la puntuacion\n";
+	while (true)
+	{
+		if (cin >> score3)
+			nombre(score3);
+		else
+		{
+			cin.clear();
+			string nombre3;
+			cin >> nombre3;
+			score(nombre3);
+		}
+	}
+}

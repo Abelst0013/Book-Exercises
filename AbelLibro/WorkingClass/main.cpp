@@ -240,15 +240,25 @@ void numberPyramid(int num)
 
 // TEMARIO
 // Cout -> Para imprimir 
-// Cin -> Para 
-// Tipos de Datos -> Int (4B - 32b), Char(1B - 8b), Float(4B - 32b), Bool(1B - 8b), String(Indifinido), Double(8B - 64b), Long(4B - 32b), Short(2B - 16b), Long long(8B - 64b). 
+// Cin -> Para llamar al input 
+
+// Tipos de Datos -> 
+// Int (4B - 32b), Char(1B - 8b), Float(4B - 32b), Bool(1B - 8b), 
+// String(Indifinido), Double(8B - 64b), Long(4B - 32b), 
+// Short(2B - 16b), Long long(8B - 64b). 
+
 // Modificadores -> Const, Const Expr, Static, Dynamic, Unsigned, Long. 
+
 // Sentencias condicionales -> If, else, Switch. 
 // Sentencias ciclicas -> For & While.
+
 // Funciones -> Tipos de Parametros, Sobrecarga
+
 // Estructuras de datos -> *Arreglo, Lista, Stack, Queue, Map/Dictonary, Binary Tree, Set, Graph, Deque, *Matrix, Tuple.
+
 // IDE -> I = Integrated, D = Development, E = Enviroment
 // Proceso de Compilacion -> Analisis, Linker, Codigo Objeto.
 // Errores -> Errores de Compilacion, Errores de Linker, Errores de Codigo Objeto.
+
 // Strings -> Un conjunto de caracteres. -> Caracter Nulo al final. 
 // Stack y Heap -> Stack = Memoria Estatica, Heap = Memoria Dinamica. 

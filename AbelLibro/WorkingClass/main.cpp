@@ -262,3 +262,4 @@ void numberPyramid(int num)
 
 // Strings -> Un conjunto de caracteres. -> Caracter Nulo al final. 
 // Stack y Heap -> Stack = Memoria Estatica, Heap = Memoria Dinamica. 
+

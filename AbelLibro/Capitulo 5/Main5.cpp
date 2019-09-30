@@ -8,13 +8,15 @@
 #include <stdio.h>
 #include <conio.h>
 #include <cstdlib>
+#include <time.h>
+#include <stdlib.h>
 
 using namespace std;
 
 // Exercises 1 
-int area(int length, int width);
+//int area(int length, int width);
  //Try this 1
-int s0 = area(7, 2); // Correcto
+//int s0 = area(7, 2); // Correcto
 //int s1 = area(7;   // "Area" is undefined <-> expected a ')'
 //int s2 = area(7)   // "Area" is undefined 
 //int s3 = area(7);  // expected a ';'
@@ -218,3 +220,94 @@ int s0 = area(7, 2); // Correcto
 //
 //	return 0;
 //}
+
+// Exercises 12 
+
+int bulls = 0;
+int cows = 0;
+
+vector<int> get_numbers()
+{
+	vector<int> numbers(4);
+	numbers[0] = rand() % 10;
+	numbers[1] = rand() % 10;
+	numbers[2] = rand() % 10;
+	numbers[3] = rand() % 10;
+	return numbers;
+}
+
+vector<int>int_vector(int a)
+{
+	vector<int> vectors(4);
+	vectors[0] = a / 1000 % 10;
+	vectors[1] = a / 100 % 10;
+	vectors[2] = a / 10 % 10;
+	vectors[3] = a % 10;
+	return vectors;
+}
+
+void check(vector<int> answers, vector<int> numbers)
+{
+	bulls = 0;
+	cows = 0;
+	vector<char> bullss(4, 'NO');
+	vector<char> cowss(4, 'NO');
+	for (int i = 0; i < numbers.size(); ++i)
+	{
+		if (answers[i] == numbers[i])
+		{
+			++bulls;
+			bullss[i] = 'SI';
+		}
+	}
+	for (int i = 0; i < numbers.size(); ++i)
+	{
+		if (bullss[i] == 'NO')
+		{
+			for (int j = 0; j < answers.size(); ++j)
+			{
+				if (bullss[j] == 'NO' && cowss[j] == 'NO')
+				{
+					if (numbers[i] == answers[j])
+					{
+						++cows;
+						cowss[j] == 'SI';
+					}
+				}
+			}
+		}
+	}
+}
+
+int main()
+{
+	int answer = 0;
+	int lista = 0;
+	cout << "Adivina los 4 digitos!\n";
+	cout << "Ingresa 4 numeros elegidos a tu eleccion\n";
+	cin >> lista;
+	srand(lista);
+	vector<int> numbers = get_numbers();
+	cout << "Ingresa tu respuesta.\n";
+
+	while (cin >> answer)
+		if (answer > 9999 || answer < 0)
+			cout << "Ingresa un numero entre el 0000 y el 9999\n";
+		else
+		{
+			vector<int> answers = int_vector(answer);
+			check(answers, numbers);
+			if (bulls == 4)
+			{
+				cout << "Acertaste!! \n";
+				numbers = get_numbers();
+			}
+			if (bulls < 4)
+			{
+				cout << "Bulls: " << bulls << endl;
+				cout << "Cows: " << cows << endl;
+			}
+		}
+
+
+}

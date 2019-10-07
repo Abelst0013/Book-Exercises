@@ -263,3 +263,39 @@ void numberPyramid(int num)
 // Strings -> Un conjunto de caracteres. -> Caracter Nulo al final. 
 // Stack y Heap -> Stack = Memoria Estatica, Heap = Memoria Dinamica. 
 
+// Revision de Examen
+
+//bool IsPalindrome(string word)
+//{
+//	size_t size = word.size();
+//	for (int i = 0; i < size * 0.5; i++)
+//	{
+//		if (word[i] != word[size - 1 - i])
+//		{
+//			return false;
+//		}
+//	}
+//
+//	return true;
+//}
+//
+//int Factorial(int num)
+//{
+//	int result = 1;
+//
+//	for (int i = num; i > 0; --i)
+//	{
+//		result *= i;
+//	}
+//	return result;
+//}
+//
+//int RecursiveFactorial(int num)
+//{
+//	if (1 == num)
+//	{
+//		return 1;
+//	}
+//
+//	return num * RecursiveFactorial(num - 1);
+//}

@@ -11,89 +11,88 @@
 
 using namespace std;
 
-int sumOneToN(int num);
-int sumThreeAndFive(int num);
-void numberPyramid(int num);
-int Suma(int a, int b);
-
-int main()
-{
-	cout << "Escoge una de 3 opciones:\n"
-		<< "\t1. Suma numeros de 1 a n.\n"
-		<< "\t2. Syma multiplos de 3 y 5 de 1 a n.\n"
-		<< "\t3. Escalera de numeros a n.\n";
-
-	int option = 0;
-	int number = 0;
-	cin >> option;
-
-	if (option == 1)
-	{
-		cout << "Escribe un numero: ";
-		cin >> number;
-		cout << "El resultado es: " << sumOneToN(number);
-	}
-	else if (option == 2)
-	{
-		cout << "Escribe un numero: ";
-		cin >> number;
-		cout << "El resultado es: " << sumThreeAndFive(number);
-	}
-	else if (option == 3)
-	{
-		cout << "Escribe un numero: ";
-		cin >> number;
-		numberPyramid(number);
-	}
-	else {
-		cout << "Option incorrecta. Me fui ";
-	}
-
-	cin.ignore();
-	cin.clear();
-	cin.get();
-	return 0;
-}
-
-int sumOneToN(int num) {
-
-	int result = 0;
-	for (int i = 1; i <= num; ++i)
-	{
-		cout << i << ", ";
-		result += i;
-	}
-
-	return result;
-}
-
-int sumThreeAndFive(int num) {
-
-	int result = 0;
-	for (int i = 1; i <= num; ++i)
-	{
-		if (0 == i % 3 || 0 == i % 5)
-		{
-			cout << i << ", ";
-			result += i;
-		}
-	}
-
-	return result;
-}
-
-void numberPyramid(int num)
-{
-	for (int i = 1; i < i <= num; ++i)
-	{
-		for (int j = 1; j <= i; ++j)
-		{
-			cout << j;
-		}
-		cout << endl;
-	}
-}
-
+//int sumOneToN(int num);
+//int sumThreeAndFive(int num);
+//void numberPyramid(int num);
+//int Suma(int a, int b);
+//
+//int main()
+//{
+//	cout << "Escoge una de 3 opciones:\n"
+//		<< "\t1. Suma numeros de 1 a n.\n"
+//		<< "\t2. Syma multiplos de 3 y 5 de 1 a n.\n"
+//		<< "\t3. Escalera de numeros a n.\n";
+//
+//	int option = 0;
+//	int number = 0;
+//	cin >> option;
+//
+//	if (option == 1)
+//	{
+//		cout << "Escribe un numero: ";
+//		cin >> number;
+//		cout << "El resultado es: " << sumOneToN(number);
+//	}
+//	else if (option == 2)
+//	{
+//		cout << "Escribe un numero: ";
+//		cin >> number;
+//		cout << "El resultado es: " << sumThreeAndFive(number);
+//	}
+//	else if (option == 3)
+//	{
+//		cout << "Escribe un numero: ";
+//		cin >> number;
+//		numberPyramid(number);
+//	}
+//	else {
+//		cout << "Option incorrecta. Me fui ";
+//	}
+//
+//	cin.ignore();
+//	cin.clear();
+//	cin.get();
+//	return 0;
+//}
+//
+//int sumOneToN(int num) {
+//
+//	int result = 0;
+//	for (int i = 1; i <= num; ++i)
+//	{
+//		cout << i << ", ";
+//		result += i;
+//	}
+//
+//	return result;
+//}
+//
+//int sumThreeAndFive(int num) {
+//
+//	int result = 0;
+//	for (int i = 1; i <= num; ++i)
+//	{
+//		if (0 == i % 3 || 0 == i % 5)
+//		{
+//			cout << i << ", ";
+//			result += i;
+//		}
+//	}
+//
+//	return result;
+//}
+//
+//void numberPyramid(int num)
+//{
+//	for (int i = 1; i < i <= num; ++i)
+//	{
+//		for (int j = 1; j <= i; ++j)
+//		{
+//			cout << j;
+//		}
+//		cout << endl;
+//	}
+//}
 
 // 09-18-2019 
 
@@ -299,3 +298,61 @@ void numberPyramid(int num)
 //
 //	return num * RecursiveFactorial(num - 1);
 //}
+
+
+// Clase 7-10-2019
+
+// Token es un objeto que nos representa una interpretacion (+, -, *, /) y un valor #.
+
+// Formas basicas de crear tipos de datos 
+// Tipos de datos complejos:
+// Enum -> Enumeracion especifica
+// Struct -> La definicion de un nuevo tipo de dato que almacena propiedades (miembros o variables). << Siempre es Publica >>
+// Class -> Las clases siempre son privadas, a menos de que lo especifiques cuando la creas y le digas que es public. 
+
+enum ComputerTypes
+{
+Portatil = 0, // agregar un valor de donde comenzar a guardar.
+Escritorio, // 1
+Servidor,
+Carro,
+Smartphone, 
+Tablet,
+Calculadora,
+Robot, // 7
+};
+
+//struct Alumno
+//{
+//	string Nombre;
+//	int Edad;
+//	float Promedio;
+//	string Grado;
+//	char Grupo;
+//	int Asistencias;
+//	string Matricula;
+//};
+//Alumno Juan;
+//Juan.Nombre = "Juan";
+//cout << Juan.Nombre;
+
+//class Alumno
+//{
+//public:
+//	Alumno(string Nombre, int Edad); // Constructor
+//	~Alumno(); // Destructor
+//
+//	m_Nombre;
+//	m_Edad;
+//};
+//
+//Alumno(string Nombre, int Edad)
+//{
+//	m_Nombre = Nombre;
+//	m_Edad = Edad;
+//}
+//
+//Alumno Pedro("Pedro", 21);
+//cout << pedro.m_Nombre;
+
+// Memory Leak -> Se libera hasta que reinicies la computadora, por eso es importante que crees un destructor para limpiar espacio en la memoria. 

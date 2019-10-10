@@ -11,45 +11,189 @@
 
 using namespace std;
 
-//Exercises 1, 2, 3 // No pude hacerlo, demasiado complejo creo yo ahaha. 
+//Exercises 1, 2, 3 
 
-//class Token {
-//public:
-//
-//};
-//
-//class Token_stream {
-//public:
-//
-//private:
-//
-//};
-//
-//void Token_stream::putback(Token t) {
-//
-//}
-//
-//Token Token_stream::get() {
-//
-//}
-//
-//Token_stream ts;
-//double expression();
-//
-//double primary() {
-//
-//}
-//double term() {
-//
-//}
-//double expression() {
-//
-//}
-//
-//int main()
-//{
-//
-//}
+class Token 
+{
+public:
+	char type;
+	double value;
+};
+
+class Token_stream 
+{
+public:
+	Token get();
+	void putback(Token t);
+private:
+	bool full{ false };
+	Token buf;
+};
+
+void Token_stream::putback(Token t) 
+{
+	buf = t;
+	full = true;
+}
+
+Token Token_stream::get() 
+{
+	if (full)
+	{
+		full = false;
+		return buf;
+	}
+
+	char a;
+	cin >> a; 
+
+	switch (a)
+	{
+		case '=':
+		case 's':
+		case '(': case ')':
+		case '{': case '}':
+		case '+': case '-': case '*': case '/':
+		case '!':
+			return Token{ a };
+		case '.':
+		case '0': case '1': case '2': case '3': case '4':
+		case '5': case '6': case '7': case '8': case '9':
+		{
+			cin.putback(a);
+			double b;
+			cin >> b;
+			return Token{ '8', b };
+		}
+	}
+}
+
+Token_stream ts;
+double expression();
+
+int factorial(int n)
+{
+	int result = 1;
+	for (int i = n; i > 0; --i)
+	{
+		result *= i;
+	}
+	return result;
+}
+
+double primary() 
+{
+	Token t = ts.get();
+	switch (t.type)
+	{
+	case '(': 
+	{
+		double a = expression();
+		t = ts.get();
+		return a;
+	}
+	case '{':
+	{
+		double a = expression();
+		t = ts.get();
+		return a;
+	}
+	case '8':
+		return t.value;
+	}
+}
+
+double fact()
+{
+	double b = primary();
+	Token t = ts.get();
+
+	switch (t.type)
+	{
+	case '!':
+		return factorial(b);
+	default:
+		ts.putback(t);
+		return b;
+	}
+}
+double term() 
+{
+	double c = fact();
+	Token t = ts.get();
+
+	while (true)
+	{
+		switch (t.type)
+		{
+		case '*':
+			c *= fact();
+			t = ts.get();
+			break;
+		case '/':
+		{
+			double c2 = fact();
+			c /= c2;
+			t = ts.get();
+			break;
+		}
+		default:
+			ts.putback(t);
+			return c;
+		}
+	}
+}
+double expression() 
+{
+	double d = term();
+	Token t = ts.get();
+
+	while (true)
+	{
+		switch (t.type)
+		{
+		case '+':
+			d += term();
+			t = ts.get();
+			break;
+		case '-':
+			d -= term();
+			t = ts.get();
+			break;
+		default:
+			ts.putback(t);
+			return d;
+		}
+	}
+}
+
+int main()
+{
+	cout << "<< Calculadora de Abel >>\n";
+	cout << "\n";
+	cout << "Haz la Operacion que sea de tu agrado.\n";
+	cout << "Opciones disponibles: '+, -, *, /, (), {}, y !'\n";
+	cout << "Para saber el resultado ingresa un '=' o 's' para salir y presiona Enter.\n";
+	cout << "\n";
+
+	double val = 0;
+	while (cin)
+	{
+		Token t = ts.get();
+
+		if (t.type == 's')
+			break;
+		if (t.type == '=')
+		{
+			cout << "El resultado es: " << val << '\n';
+		}
+		else
+		{
+			ts.putback(t);
+			val = expression();
+		}
+	}
+}
 
 // Exercises 4 
 
@@ -216,56 +360,56 @@ using namespace std;
 
 // Exercises 10 
 
-int factorial(int num) // Examen
-{
-	if (num == 0)
-		return 1;
-	int result = 1;
-	for (int i = 1; i <= num; ++i)
-	{
-		result *= i;
-	}
-	return result; 
-}
-	//Permutations: P(a,b) = a!/(a-b)!
-int permutations(int a, int b) // Una permutacion es la variacion del orden o posicion de los elementos de un conjunto ordenado o una tupla. https://www.disfrutalasmatematicas.com/combinatoria/combinaciones-permutaciones.html
-{
-	int result = 0;
-	int x = factorial(a);
-	int y = factorial(a - b);
-	result = x / y;
-	return result;
-}
-	//Combinations: C(a,b) = P(a,b)/b!
-int combinations(int a, int b) //https://www.aaamatematicas.com/sta-combin.htm
-{
-	return permutations(a, b) / factorial(b);
-}
-
-int main()
-{
-	int a = 0;
-	int b = 0;
-	while (cin)
-	{
-		cout << "Ingresa 2 numeros: \n";
-		cin >> a >> b;
-
-		char c = 0;
-		cout << "Ingresa que quieres hacer con esos 2 numeros (P)ermutaciones o (C)ombinaciones\n";
-		cin >> c;
-		int resultado = 0;
-		switch (c)
-		{
-		case 'p': case 'P':
-			resultado = permutations(a, b);
-			cout << "Permutaciones posibles de (" << a << ',' << b << ") = " << resultado << endl;
-			break;
-		case 'c': case 'C':
-			resultado = combinations(a, b);
-			cout << "Combinaciones posibles de (" << a << ',' << b << ") = " << resultado << endl;
-			break;
-		}
-	}
-	return 0;
-}
+//int factorial(int num) // Examen
+//{
+//	if (num == 0)
+//		return 1;
+//	int result = 1;
+//	for (int i = 1; i <= num; ++i)
+//	{
+//		result *= i;
+//	}
+//	return result; 
+//}
+//	//Permutations: P(a,b) = a!/(a-b)!
+//int permutations(int a, int b) // Una permutacion es la variacion del orden o posicion de los elementos de un conjunto ordenado o una tupla. https://www.disfrutalasmatematicas.com/combinatoria/combinaciones-permutaciones.html
+//{
+//	int result = 0;
+//	int x = factorial(a);
+//	int y = factorial(a - b);
+//	result = x / y;
+//	return result;
+//}
+//	//Combinations: C(a,b) = P(a,b)/b!
+//int combinations(int a, int b) //https://www.aaamatematicas.com/sta-combin.htm
+//{
+//	return permutations(a, b) / factorial(b);
+//}
+//
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	while (cin)
+//	{
+//		cout << "Ingresa 2 numeros: \n";
+//		cin >> a >> b;
+//
+//		char c = 0;
+//		cout << "Ingresa que quieres hacer con esos 2 numeros (P)ermutaciones o (C)ombinaciones\n";
+//		cin >> c;
+//		int resultado = 0;
+//		switch (c)
+//		{
+//		case 'p': case 'P':
+//			resultado = permutations(a, b);
+//			cout << "Permutaciones posibles de (" << a << ',' << b << ") = " << resultado << endl;
+//			break;
+//		case 'c': case 'C':
+//			resultado = combinations(a, b);
+//			cout << "Combinaciones posibles de (" << a << ',' << b << ") = " << resultado << endl;
+//			break;
+//		}
+//	}
+//	return 0;
+//}

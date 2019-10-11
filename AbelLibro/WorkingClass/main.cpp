@@ -310,17 +310,17 @@ using namespace std;
 // Struct -> La definicion de un nuevo tipo de dato que almacena propiedades (miembros o variables). << Siempre es Publica >>
 // Class -> Las clases siempre son privadas, a menos de que lo especifiques cuando la creas y le digas que es public. 
 
-enum ComputerTypes
-{
-Portatil = 0, // agregar un valor de donde comenzar a guardar.
-Escritorio, // 1
-Servidor,
-Carro,
-Smartphone, 
-Tablet,
-Calculadora,
-Robot, // 7
-};
+//enum ComputerTypes
+//{
+//Portatil = 0, // agregar un valor de donde comenzar a guardar.
+//Escritorio, // 1
+//Servidor,
+//Carro,
+//Smartphone, 
+//Tablet,
+//Calculadora,
+//Robot, // 7
+//};
 
 //struct Alumno
 //{

@@ -261,6 +261,8 @@ using namespace std;
 
 // Strings -> Un conjunto de caracteres. -> Caracter Nulo al final. 
 // Stack y Heap -> Stack = Memoria Estatica, Heap = Memoria Dinamica. 
+// Stack = 1 MB
+// Heap = 0 - Maximo del sistema operativo 
 
 // Revision de Examen
 
@@ -356,3 +358,50 @@ using namespace std;
 //cout << pedro.m_Nombre;
 
 // Memory Leak -> Se libera hasta que reinicies la computadora, por eso es importante que crees un destructor para limpiar espacio en la memoria. 
+
+// Clase 14-Oct-19
+
+//Puntero 
+//Variable que almacena una direccion de memoria. 
+//Diferencia es que guarda una direccion de memoria = Necesita lo mismo que un Entero de almacenamiento(4B).
+//
+// int * pointer 
+//
+//   int   = Tipo de Dato = Espacio en la memoria = Este le dice que debe buscar el puntero.  
+//    *    = Operador 
+// pointer = Nombre del puntero
+
+// int* ptr = new int(45)
+// char* chaptr = new char ('a')
+
+// ptr = nullptr  = Null es para igualar a 0. 
+// delete ptr;    = Para limpiar el espacio de memoria donde se encontraba el ptr. 
+// ptr = 3;       = Cambiar de lugar de memoria. 
+// *ptr = 128;    = Ir a la direccion de memoria y cambiar el valor, por el designado. 
+
+//Vector<int>* myNums;
+//
+// Vector<int> nums;
+//  nums.push_back(5);
+// '.' = Para acceder a algo.
+
+// Vector<int> nums;
+// nums.push_back(5);   = Asignar un Nums 
+// nums.length();       = Cantidad de Nums
+
+// myNums -> push_back(20);
+// *myNums.push_back(20);
+// Same shit 
+
+// Siguiente clase aridmetica de punteros
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//

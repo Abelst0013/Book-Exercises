@@ -393,15 +393,39 @@ using namespace std;
 // *myNums.push_back(20);
 // Same shit 
 
-// Siguiente clase aridmetica de punteros
+// Clase 17-Oct-19
+
+// Aridmetica de punteros
+//int main()
+//{
+//	int* intPointer = new int(45);
 //
+//	cout << intPointer << endl;
+//	cout << intPointer + 1 << endl;
+//	cout << intPointer + 5 << endl;
+//	cout << endl;
+//	cout << *intPointer << endl;
+//	cout << ++*intPointer << endl;
+//	cout << *intPointer + 5 << endl;
+//	cout << endl;
+//	cout << *(intPointer + 5) << endl;
+//	cout << endl;
 //
+//	cin.get();
+//	delete intPointer;
+//	return 0;
+//}
+
+
 //
+// Conjunto de informacion almacenada en la unidad de almacenamiento
+
+// Binario - 
+// Texto
 //
-//
-//
-//
-//
-//
-//
-//
+// Read - Acceder a la informacion y leerla pero no modificarla.
+// Write - Abre el archivo, lo limpia y te permite escribir.
+// Append - Abre un archivo en modo de escritura sin eliminar la informacion y posicionando el "cursor" al final del archivo.
+// Read+   = Lectura   + Escritura
+// Write+  = Escritura + Lectura
+// Append+ = Lectura   + Escritura (Sin eliminar la informacion.) 

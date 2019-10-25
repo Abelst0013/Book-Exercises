@@ -11,7 +11,7 @@
 
 using namespace std;
 
-// Exercises 2
+// Exercises 2 & 3
 //
 //class NamePairs
 //{

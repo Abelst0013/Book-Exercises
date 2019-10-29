@@ -1,11 +1,11 @@
 # include "Chrono.h"
 
 namespace Chrono {
-	
-	Date::Date (int yy, Month mm, int dd)
+
+	Date::Date(int yy, Month mm, int dd)
 		: y{ yy }, m{ mm }, d{ dd }
 	{
-		if (!is_date(yy,mm,dd)) throw Invalid{};
+		if (!is_date(yy, mm, dd)) throw Invalid{};
 	}
 
 	const Date& default_date()
@@ -15,7 +15,7 @@ namespace Chrono {
 	}
 
 	Date::Date()
-		:y{default_date().Year()},
+		:y{ default_date().Year() },
 		m{ default_date().month() },
 		d{ default_date().Day() }
 	{
